@@ -27,6 +27,6 @@ jobs:
               run: |
                 git config --global user.name 'github-actions[bot]'
                 git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-                git add ./download-sources/cargo.json
+                git add ./flatpak/cargo.json
                 git diff-index --quiet HEAD || git commit -m "chore: update flatpak cargo sources"
                 git push origin HEAD:main
