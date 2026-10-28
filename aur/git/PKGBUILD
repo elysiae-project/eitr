@@ -1,0 +1,28 @@
+pkgname=elysiae-launcher-git
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Universal & performant 'Anime Game' launcher for Linux (latest git commit)"
+arch=('x86_64' 'aarch64')
+url="https://elysiae.app"
+license=('BSD-3-Clause') 
+options=(!lto)
+
+source=("git+https://github.com/elysiae-project/elysiae.git")
+sha256sums=('SKIP')
+
+depends=('freetype2>=2.9.1' 'gtk4>=4.22.0')
+makedepends=('rustup>=1.25.0' 'meson>=1.4.0' 'ninja>=1.10.0' 'git>=2.50.0')
+
+build() {
+    arch-meson elysiae build -Dprofile=release -Dtests=true
+    meson compile -C build
+}
+
+check() {
+    meson test -C build
+}
+
+package() {
+    meson install -C build --destdir "$pkgdir"
+    install -Dm644 elysiae/LICENSE -t "$pkgdir/usr/share/licenses/$pkgname/"
+}

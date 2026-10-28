@@ -1,4 +1,11 @@
+# Flatpak related
 *build*
 *.flatpak-builder*
 *repo*
 *.flatpak*
+
+# Arch AUR related
+aur/git/elysiae
+aur/stable/elysiae
+*pkg*
+*src*
