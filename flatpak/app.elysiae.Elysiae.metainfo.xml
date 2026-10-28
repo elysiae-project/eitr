@@ -1,28 +1,49 @@
 <?xml version="1.1" encoding="UTF-8"?>
+<!-- Copyright 2026 The Elysiae Project -->
 <component type="desktop-application">
     <id>app.elysiae.Elysiae</id>
     <name>Elysiae</name>
-    <summary>Unifiied "Anime Game" Launcher</summary>
+    <summary>Universal "Anime Game" Launcher</summary>
     <developer id="app.elysiae">
-        <name>Shob3r</name>
         <name>The Elysiae Project</name>
     </developer>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>BSD-3-Clause</project_license>
     <description>
-        <p>Elysiae is a unified and performant game launcher for "Anime Games" from a certain Chinese video game company</p>
-        <p></p>
+        <p>
+            Elysiae is a universal and performant launcher for "anime games" developed by a certain Chinese video game company.
+        </p>
+        <p>**Features**</p>
+        <ul>
+            <li>Safe: Elysiae does not provide mods/plugins or use them to launch games, and the project is ran by the Elysiae Project for free. Elysiae should be safer to use than the alternative launchers</li>
+            <li>Low memory usage: ~130MB idle and ~350MB when downloading content</li>
+            <li>Low base installation size: We optimized everything in Elysiae to have as little of an impact on your system as possible. </li>
+            <li>Faster download speeds: Elysiae uses irmin, our in-house Sophon assembler, to get download speeds as fast as possible for your network</li>
+            <li>Runtime: We created Phlogiston, a fork of Proton-GE, to help squeeze out as many frames as possible by optimising exclusively for the games we support</li>
+            <li>Maintained: The Elysiae project is committed to maintaining the launcher and fixing issues where possible</li>
+        </ul>
+        <p>Elysiae is also customisable to fit your preferences. Current options include:</p>
+        <ul>
+            <li>What voice-over language to download</li>
+            <li>What language to display on screen (localised lancher text coming soon)</li>
+            <li>Weather or not to create a Desktop shortcut on launch</li>
+            <li>Toggling auto-updates/pre-install downloads as they become available</li>
+        </ul>
     </description>
     <launchable type="desktop-id">app.elysiae.Elysiae.desktop</launchable>
+    <provides>
+        <id>Elysiae.desktop</id>
+    </provides>
     <categories>
         <category>Utility</category>
         <category>Game</category>
     </categories>
     <requires>
-        <kernel version="6.14" compare="ge">Linux</kernel>
+        <kernel version="5.8" compare="ge">Linux</kernel>
         <internet>always</internet>
     </requires>
     <recommends>
+        <kernel version="6.14" compare="ge">Linux</kernel>
         <control>keyboard</control>
         <control>pointing</control>
         <display_length compare="ge">1279</display_length>
@@ -38,6 +59,12 @@
     </branding>
     <!--TODO: Get app screenshots before release-->
     <releases>
+        <release version="1.0.0" date="2026-11-1">
+            <url type="details">https://github.com/elysiae-project/elysiae/releases/1.0.0</url>
+            <description>
+                <p>Initial Release</p>
+            </description>
+        </release>
         <!--TODO: fill with initial release information once 1.0 releases-->
     </releases>
     <content_rating type="oars-1.1">
@@ -52,5 +79,5 @@
         <content_attribute id="social-audio">moderate</content_attribute>
         <content_attribute id="money-purchasing">intense</content_attribute>
         <content_attribute id="money-gambling">mild</content_attribute>
-  </content_rating>
+    </content_rating>
 </component>
