@@ -24,13 +24,14 @@ finish-args:
 modules:
   - name: Elysiae
     buildsystem: meson
+    config-opts:
+      - -Doffline=true
+      - -Dtests=false
     sources:
       - type: git
         url: https://github.com/elysiae-project/elysiae
         branch: main
       - cargo-sources.json
-    config-opts:
-      - Doffline=true
     build-options:
       append-path: /usr/lib/sdk/rust-stable/bin
       env:
