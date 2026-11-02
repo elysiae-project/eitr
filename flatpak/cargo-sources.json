@@ -1861,14 +1861,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/irmin_rs/irmin_rs-1.0.0.crate",
-        "sha256": "3c42bcd32b6bf39a9a0d0a8413d5a58e2f0e094beb074718b07483414e5b0ccb",
-        "dest": "cargo/vendor/irmin_rs-1.0.0"
+        "url": "https://static.crates.io/crates/irmin_rs/irmin_rs-1.1.0.crate",
+        "sha256": "203700cb01ac4cf17c29e636b38563421bca36e1956c92d52cb6f2c49c9117bf",
+        "dest": "cargo/vendor/irmin_rs-1.1.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"3c42bcd32b6bf39a9a0d0a8413d5a58e2f0e094beb074718b07483414e5b0ccb\", \"files\": {}}",
-        "dest": "cargo/vendor/irmin_rs-1.0.0",
+        "contents": "{\"package\": \"203700cb01ac4cf17c29e636b38563421bca36e1956c92d52cb6f2c49c9117bf\", \"files\": {}}",
+        "dest": "cargo/vendor/irmin_rs-1.1.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
